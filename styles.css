@@ -1,0 +1,41 @@
+:root {
+  --bg: #eef4f4; --surface: #ffffff; --line: #dce6e7;
+  --ink: #0e1726; --muted: #586374;
+  --brand: #006d77; --brand-ink: #005a63; --brand-soft: #dcefef; --xing: #e8461f;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1418; --surface: #111d22; --line: #22343a;
+    --ink: #e7eef0; --muted: #9fb0b6;
+    --brand: #4fb8c1; --brand-ink: #7fd0d7; --brand-soft: #16343a; --xing: #ff7a55;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--brand-ink); }
+a:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; border-radius: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
+header.site { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+header.site img { width: 44px; height: 44px; }
+header.site .name { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+header.site .name span { color: var(--xing); }
+header.site nav { margin-left: auto; display: flex; gap: 16px; font-size: 0.95rem; }
+main { padding-top: 8px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 24px 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+h3 { font-size: 1.05rem; margin: 20px 0 4px; }
+.meta { color: var(--muted); margin: 0 0 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 16px 0; }
+.summary { background: var(--brand-soft); border-color: transparent; }
+.summary ul { margin: 8px 0 0; padding-left: 20px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+.features { padding-left: 20px; }
+footer.site { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
